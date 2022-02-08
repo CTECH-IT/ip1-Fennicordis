@@ -9,8 +9,8 @@ let dy = -2;
 
 let ballRadius = 10;
 
-let paddleHeight = 10;
-let paddleWidth = 75;
+let paddleHeight = 8;
+let paddleWidth = 80;
 let paddleX = (canvas.width - paddleWidth) / 2;
 
 let rightPressed = false;
@@ -55,6 +55,8 @@ function draw() {
         if (x > paddleX && x < paddleX + paddleWidth) {  // paddle check
             dy = -dy;
             score += 1;
+            dx += 0.1
+            dy += -0.1
         }
         else {  // it hit the floor!
             alert("Score: " + score);
