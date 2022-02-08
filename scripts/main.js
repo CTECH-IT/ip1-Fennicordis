@@ -21,7 +21,7 @@ let score = 0;
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "#FF9999";
+    ctx.fillStyle = "#7dc4ff";
     ctx.fill();
     ctx.closePath();
 }
@@ -54,9 +54,10 @@ function draw() {
     } else if (y + dy > canvas.height - ballRadius) {  // floor check
         if (x > paddleX && x < paddleX + paddleWidth) {  // paddle check
             dy = -dy;
+            score += 1;
         }
         else {  // it hit the floor!
-            alert("GAME OVER!");
+            alert("Score: " + score);
             document.location.reload();
             clearInterval(interval);  // needed for the browser to end the game
         }
@@ -94,7 +95,7 @@ function keyDownHandler(e) {
 function drawScore() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#000000";
-    ctx.fillText("Score: " + score, 8, 100);
+    ctx.fillText("Score: " + score, 8, 310);
 }
 
 function keyUpHandler(e) {
