@@ -55,8 +55,8 @@ function draw() {
         if (x > paddleX && x < paddleX + paddleWidth) {  // paddle check
             dy = -dy;
             score += 1;
-            dx += 0.1
-            dy += -0.1
+            dx += 0.2
+            dy += -0.2
         }
         else {  // it hit the floor!
             alert("Score: " + score);
