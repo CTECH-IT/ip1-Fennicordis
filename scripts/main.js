@@ -83,6 +83,8 @@ function draw() {
 
     drawScore();
 
+    drawSpeed();
+
 }
 
 function keyDownHandler(e) {
@@ -98,6 +100,12 @@ function drawScore() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#000000";
     ctx.fillText("Score: " + score, 8, 310);
+}
+
+function drawSpeed() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#000000";
+    ctx.fillText("Speed: " + Math.abs(dy), 402, 310);
 }
 
 function keyUpHandler(e) {
