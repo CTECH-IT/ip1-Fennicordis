@@ -9,8 +9,8 @@ let dy = -2;
 
 let ballRadius = 10;
 
-let paddleHeight = 8;
-let paddleWidth = 80;
+let paddleHeight = 7.5;
+let paddleWidth = 85;
 let paddleX = (canvas.width - paddleWidth) / 2;
 
 let rightPressed = false;
@@ -67,13 +67,13 @@ function draw() {
 
     // paddle controls
     if (rightPressed) {
-        paddleX += 7;
+        paddleX += 6;
         if (paddleX + paddleWidth > canvas.width) {
             paddleX = canvas.width - paddleWidth;
         }
     }
     else if (leftPressed) {
-        paddleX -= 7;
+        paddleX -= 6;
         if (paddleX < 0) {
             paddleX = 0;
         }
