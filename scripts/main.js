@@ -59,7 +59,7 @@ function draw() {
             dy += -0.2
         }
         else {  // it hit the floor!
-            alert("Score: " + score);
+            alert("Game Over! " + "Score: " + score);
             document.location.reload();
             clearInterval(interval);  // needed for the browser to end the game
         }
